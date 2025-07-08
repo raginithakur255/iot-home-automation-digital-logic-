@@ -1,3 +1,5 @@
+// Sensor reading and device control example
+
 int pir = 2;         // PIR sensor pin
 int relay = 8;       // Appliance (LED/Fan)
 int button = 4;      // Remote control input (simulate Bluetooth)
