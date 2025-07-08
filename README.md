@@ -1,25 +1,32 @@
-# iot-home-automation-digital-logic-
-// Sensor reading and device control example
 
-int sensorPin = 2;     // Interference sensor input pin
-int devicePin = 8;     // Light/Fan control output pin
+  # IoT Home Automation using Digital Logic
 
-void setup() {
-  pinMode(sensorPin, INPUT);
-  pinMode(devicePin, OUTPUT);
-  Serial.begin(9600);
-}
+### 🔧 Project Description:
+This project uses a PIR sensor and a remote input to control a home appliance using an Arduino Uno. Logic is applied using an AND condition — both motion and remote command must be present to turn the device ON.
 
-void loop() {
-  int sensorState = digitalRead(sensorPin);
+---
 
-  if(sensorState == HIGH) {
-    digitalWrite(devicePin, HIGH);  // Turn ON device
-    Serial.println("Interference detected: Device ON");
-  } else {
-    digitalWrite(devicePin, LOW);   // Turn OFF device
-    Serial.println("No interference: Device OFF");
-  }
+### ✅ Features (According to Internship Guidelines):
 
-  delay(1000);  // Wait 1 second for stability and power saving
-}
+1. **Interference Sensor**: Uses PIR to detect human motion
+2. **Microcontroller & Logic**: Arduino Uno + AND gate logic
+3. **Remote Control**: Push button used to simulate Bluetooth/Wi-Fi
+4. **Power Optimization**: Minimal delay, system active only when triggered
+
+---
+
+### 🧠 Working Table:
+
+| PIR | Remote | Output |
+|-----|--------|--------|
+| 0   | 0      | OFF    |
+| 1   | 0      | OFF    |
+| 0   | 1      | OFF    |
+| 1   | 1      | ON     |
+
+---
+
+### 📂 Full Code:
+Check the `Code.ino` file in this repository for the full Arduino program.
+
+---
